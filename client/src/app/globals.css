@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #07090e;
+  --bg-secondary: #0d1117;
+  --bg-card: rgba(16, 20, 31, 0.75);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-glow-cyan: rgba(6, 182, 212, 0.4);
+  --accent-cyan: #06b6d4;
+  --accent-emerald: #10b981;
+  --accent-violet: #8b5cf6;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: #f1f5f9;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden;
+}
+
+/* Custom Cyberpunk Dark Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 182, 212, 0.4);
+}
+
+/* Glassmorphic Panel Utility */
+.glass-panel {
+  background: rgba(14, 18, 28, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(20, 26, 40, 0.85);
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 0 20px -5px rgba(6, 182, 212, 0.15);
+}
+
+/* Subtle Animated Glowing Borders */
+.glow-border-cyan {
+  border: 1px solid rgba(6, 182, 212, 0.5);
+  box-shadow: 0 0 15px -3px rgba(6, 182, 212, 0.25);
+}
+
+.glow-border-emerald {
+  border: 1px solid rgba(16, 185, 129, 0.5);
+  box-shadow: 0 0 15px -3px rgba(16, 185, 129, 0.25);
+}
+
+/* Markdown typography */
+.prose-dark {
+  color: #e2e8f0;
+  font-size: 0.9375rem;
+  line-height: 1.625;
+}
+
+.prose-dark p {
+  margin-bottom: 0.75rem;
+}
+
+.prose-dark p:last-child {
+  margin-bottom: 0;
+}
+
+.prose-dark h1, .prose-dark h2, .prose-dark h3, .prose-dark h4 {
+  color: #f8fafc;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-dark ul, .prose-dark ol {
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-dark li {
+  margin-bottom: 0.25rem;
+}
+
+.prose-dark strong {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.prose-dark code:not(pre code) {
+  background: rgba(30, 41, 59, 0.8);
+  color: #38bdf8;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.85em;
+  font-family: monospace;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
